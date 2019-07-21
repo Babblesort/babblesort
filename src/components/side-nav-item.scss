@@ -1,0 +1,19 @@
+.side-nav-item {
+  cursor: pointer;
+  height: 5rem;
+  display: flex;
+  align-items: center;
+  padding-left: 24px;
+  color: #ffbe00;
+  font-size: 1.3rem;
+
+  &:hover,
+  &:focus {
+    background-color: #222;
+  }
+
+  &.active,
+  &.active:focus {
+    background-color: #222;
+  }
+}

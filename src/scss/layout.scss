@@ -1,0 +1,53 @@
+@import "normalize.scss";
+@import "typography.scss";
+
+html,
+body {
+  height: 100%;
+  width: 100%;
+  touch-action: none;
+}
+
+html {
+  overflow: hidden;
+}
+body {
+  font-family: Roboto;
+  font-size: 16px;
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+  -webkit-tap-highlight-color: transparent;
+}
+
+div#___gatsby,
+div#gatsby-focus-wrapper {
+  height: 100%;
+  width: 100%;
+}
+
+.layout-grid {
+  display: grid;
+  width: 100%;
+  height: 100%;
+  grid-template-columns: 250px 1fr;
+  grid-template-rows: 50px 1fr;
+  grid-template-areas:
+    "site-header site-header"
+    "side-nav site-main";
+}
+
+.site-header {
+  grid-area: site-header;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.side-nav {
+  grid-area: side-nav;
+}
+
+.site-main {
+  grid-area: site-main;
+  padding: 32px;
+}
