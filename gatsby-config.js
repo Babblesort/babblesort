@@ -19,13 +19,13 @@ module.exports = {
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
-        name: `gatsby-starter-default`,
-        short_name: `starter`,
+        name: `Babblesort Developer Log`,
+        short_name: `babblesort`,
         start_url: `/`,
         background_color: `#ffd300`,
         theme_color: `#663399`,
         display: `minimal-ui`,
-        icon: `src/images/gatsby-icon.png`, // This path is relative to the root of the site.
+        icon: `src/images/circle-b.svg`,
       },
     },
     // this (optional) plugin enables Progressive Web App + Offline functionality
