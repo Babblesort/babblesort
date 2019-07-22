@@ -7,8 +7,8 @@ const SideNav = () => (
   <nav className="side-nav">
     <BabblesortImage />
     <SideNavItem text="Developer Log" linkPath="/" />
-    <SideNavItem text="About Me" linkPath="/about-me/" />
-    <SideNavItem text="About This Site" linkPath="/about-site/" />
+    <SideNavItem text="About Me" linkPath="/about-me" />
+    <SideNavItem text="About This Site" linkPath="/about-site" />
   </nav>
 )
 
