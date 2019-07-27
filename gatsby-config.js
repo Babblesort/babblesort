@@ -3,6 +3,7 @@ module.exports = {
     title: `Babblesort`,
     description: `Personal developer blog of Paul McConnell`,
     author: `Paul McConnell`,
+    defaultPage: `/log/1`,
   },
   plugins: [
     `gatsby-plugin-react-helmet`,

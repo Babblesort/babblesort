@@ -2,8 +2,10 @@ import React from 'react';
 import { useStaticQuery, graphql, Link } from 'gatsby';
 import Img from 'gatsby-image';
 import './babblesort-image.scss';
+import { useSiteMetadata } from '../queries/useSiteMetadata';
 
 const BabblesortImage = () => {
+  const { defaultPage } = useSiteMetadata();
   const data = useStaticQuery(graphql`
     query {
       placeholderImage: file(
@@ -19,7 +21,7 @@ const BabblesortImage = () => {
   `);
 
   return (
-    <Link to="/log/1">
+    <Link to={defaultPage}>
       <Img
         className="babblesort-image"
         fluid={data.placeholderImage.childImageSharp.fluid}

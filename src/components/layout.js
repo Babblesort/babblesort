@@ -1,32 +1,24 @@
-import React from "react"
-import PropTypes from "prop-types"
-import { useStaticQuery, graphql } from "gatsby"
-import Header from "./header"
-import SideNav from "./side-nav"
-import "../scss/layout.scss"
+import React from 'react';
+import PropTypes from 'prop-types';
+import Header from './header';
+import SideNav from './side-nav';
+import { useSiteMetadata } from '../queries/useSiteMetadata';
+import '../scss/layout.scss';
 
 const Layout = ({ children }) => {
-  const data = useStaticQuery(graphql`
-    query SiteTitleQuery {
-      site {
-        siteMetadata {
-          title
-        }
-      }
-    }
-  `)
+  const { title } = useSiteMetadata();
 
   return (
     <div className="layout-grid">
-      <Header siteTitle={data.site.siteMetadata.title} />
+      <Header siteTitle={title} />
       <SideNav />
       <main className="site-main">{children}</main>
     </div>
-  )
-}
+  );
+};
 
 Layout.propTypes = {
   children: PropTypes.node.isRequired,
-}
+};
 
-export default Layout
+export default Layout;
