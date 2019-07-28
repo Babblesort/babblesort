@@ -1,21 +1,21 @@
 import React from 'react';
 import { Link } from 'gatsby';
 import Layout from './layout';
+import format from 'date-fns/format';
+import EntryHeader from './log-entry/entry-header';
 
 function BrowseLogEntries({ pageContext }) {
   const { pagedLogEntries, pageEntries, page } = pageContext;
   return (
     <Layout>
       {pageEntries.map(({ node }) => {
-        const { title, author } = node.frontmatter;
+        const { title, date } = node.frontmatter;
+        const displayDate = format(date, 'MM/DD/YYYY');
         return (
           <div key={node.id}>
-            <header>
-              <div>{title}</div>
-              <div>Posting By {author}</div>
-            </header>
+            <EntryHeader title={title} displayDate={displayDate} />
             <p>{node.excerpt}</p>
-            <Link to={node.fields.slug}>View Article</Link>
+            <Link to={node.fields.slug}>Read Entry</Link>
             <hr />
           </div>
         );
