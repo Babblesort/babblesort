@@ -4,6 +4,7 @@ import Helmet from 'react-helmet';
 import format from 'date-fns/format';
 import EntryHeader from './entry-header';
 import './log-entry-layout.scss';
+import SEO from '../seo';
 
 function LogEntryLayout({ children, pageContext }) {
   const { title, date } = pageContext.frontmatter;
@@ -11,9 +12,7 @@ function LogEntryLayout({ children, pageContext }) {
 
   return (
     <Layout>
-      <Helmet>
-        <title>{title}</title>
-      </Helmet>
+      <SEO title={title} />
       <article>
         <EntryHeader title={title} displayDate={displayDate} />
         <div className="entry-content">{children}</div>
