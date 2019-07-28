@@ -1,6 +1,5 @@
 import React from 'react';
 import Layout from '../layout';
-import Helmet from 'react-helmet';
 import format from 'date-fns/format';
 import EntryHeader from './entry-header';
 import './log-entry-layout.scss';
