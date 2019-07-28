@@ -1,5 +1,11 @@
-.entry-date {
-  color: #333;
-  font-family: RobotoMono;
-  font-size: 1.2rem;
+.entry-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  .entry-date {
+    color: #333;
+    font-family: RobotoMono;
+    font-size: 1.2rem;
+  }
 }

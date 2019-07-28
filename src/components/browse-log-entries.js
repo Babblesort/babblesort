@@ -3,11 +3,13 @@ import { Link } from 'gatsby';
 import Layout from './layout';
 import format from 'date-fns/format';
 import EntryHeader from './log-entry/entry-header';
+import SEO from './seo';
 
 function BrowseLogEntries({ pageContext }) {
   const { pagedLogEntries, pageEntries, page } = pageContext;
   return (
     <Layout>
+      <SEO title={'Dev Log'} />
       {pageEntries.map(({ node }) => {
         const { title, date } = node.frontmatter;
         const displayDate = format(date, 'MM/DD/YYYY');

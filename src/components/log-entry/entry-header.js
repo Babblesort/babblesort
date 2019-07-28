@@ -3,7 +3,7 @@ import './entry-header.scss';
 
 function EntryHeader({ title, displayDate }) {
   return (
-    <header>
+    <header className="entry-header">
       <h1>{title}</h1>
       <div className="entry-date">{displayDate}</div>
     </header>
