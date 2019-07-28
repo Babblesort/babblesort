@@ -6,6 +6,12 @@ module.exports = {
     defaultPage: `/log/1`,
   },
   plugins: [
+    {
+      resolve: `gatsby-plugin-mdx`,
+      options: {
+        extensions: ['.mdx', '.md'],
+      },
+    },
     `gatsby-plugin-react-helmet`,
     {
       resolve: `gatsby-source-filesystem`,
@@ -24,13 +30,6 @@ module.exports = {
     `gatsby-transformer-sharp`,
     `gatsby-plugin-sharp`,
     `gatsby-plugin-sass`,
-    {
-      resolve: `gatsby-plugin-mdx`,
-      options: {
-        extensions: ['.mdx', '.md'],
-        defaultLayout: require.resolve('./src/components/log-entry-layout.js'),
-      },
-    },
     {
       resolve: `gatsby-plugin-manifest`,
       options: {

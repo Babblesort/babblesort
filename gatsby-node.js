@@ -27,7 +27,7 @@ exports.createPages = ({ graphql, actions }) => {
             }
             frontmatter {
               title
-              author
+              date
             }
           }
         }
@@ -42,8 +42,6 @@ exports.createPages = ({ graphql, actions }) => {
     const pageSize = 10;
     const pageCount = Math.ceil(logEntries.length / pageSize);
     const pages = Array(pageCount).fill(undefined);
-    console.log({ pageCount });
-    console.log({ pages });
 
     let start = 0;
     const pagedLogEntries = pages.map(() => {
@@ -51,7 +49,6 @@ exports.createPages = ({ graphql, actions }) => {
       start += pageSize;
       return page;
     });
-    console.log({ pagedLogEntries });
 
     pagedLogEntries.forEach((pageEntries, index) => {
       const page = index + 1;
